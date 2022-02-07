@@ -17,13 +17,13 @@ import Navbar from './components/Navbar';
 import About from './Pages/About';
 import SignUp from './Pages/Signup';
 import RegisterForm from "./components/RegisterFom";
+import EditHotel from "./hotels/Edithotel";
 function App() {
   return (
     
     
     <BrowserRouter>
     <TopNav />
-    <Navbar />
     <ToastContainer position="top-center" />
     <Routes >
     <Route exact path ="/" element = {<Home />} />
@@ -33,6 +33,7 @@ function App() {
     <Route path="/dashboard/seller"  element={ <PrivateRoute> <DashboardSeller /> </PrivateRoute> } />
     <Route path="/hotels/new"  element={ <PrivateRoute> <NewHotel /> </PrivateRoute> } />
     <Route path="/stripe/callback"  element={ <PrivateRoute> <StripeCallback /> </PrivateRoute> } />
+    <Route path="/hotel/edit/:hotelId"  element={ <PrivateRoute> <EditHotel /> </PrivateRoute> } />
     <Route path='/about' element={<About/>} />
     <Route path='/sign-up' element={<RegisterForm/>} />
     </Routes> 

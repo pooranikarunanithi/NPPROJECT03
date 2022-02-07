@@ -2,7 +2,6 @@ import {useState} from "react";
 import {toast} from "react-toastify";
 //import AlgoliaPlaces from 'algolia-places-react';
 import { DatePicker, Select } from "antd";
-
 import { createHotel } from "../actions/hotel";
 import {useSelector} from "react-redux";
 import HotelCreateForm from "../components/forms/HotelCreateForm";
