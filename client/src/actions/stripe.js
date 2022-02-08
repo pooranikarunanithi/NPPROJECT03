@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 export const createConnectAccount = async (token) =>
   await axios.post(
     `${process.env.REACT_APP_API}/create-connect-account`,
@@ -45,6 +46,18 @@ export const createConnectAccount = async (token) =>
   await axios.post(
     `${process.env.REACT_APP_API}/payout-setting`,
     {},
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+  export const getSessionId = async (token, hotelId) =>
+  await axios.post(
+    `${process.env.REACT_APP_API}/stripe-session-id`,
+    {
+      hotelId,
+    },
     {
       headers: {
         Authorization: `Bearer ${token}`,

@@ -4,7 +4,9 @@ import { login } from "../actions/auth";
 import LoginForm from "../components/LoginForm";
 import { useDispatch } from "react-redux";
 import {  useNavigate } from "react-router-dom";
-  
+import BodyBackgroundColor from "react-body-backgroundcolor";
+
+
   const Login = ( ) => {
   const navigate =useNavigate();
  
@@ -43,14 +45,17 @@ import {  useNavigate } from "react-router-dom";
 
     return (
         <>
-        
-          <div className="container-fluid bg-secondary p-5 text-center">
-            <h1>Login</h1>
-          </div>
+        <BodyBackgroundColor backgroundColor='purple'></BodyBackgroundColor>
+        <div className="container-fluid  p-1 text-center">
+        <h1 style={{backgroundColor: "purple"}}>Login</h1>
+       
+      </div>
     
           <div className="container">
             <div className="row">
-              <div className="col-md-6 offset-md-3">
+              <div className= "col-md-3 offset-md-3">
+              <div style={{  justifyContent:'center', alignItems:'center', height: '10vh'}}>
+              </div>
                 <LoginForm
                   handleSubmit={handleSubmit}
                   email={email}
@@ -60,7 +65,7 @@ import {  useNavigate } from "react-router-dom";
                 />
               </div>
             </div>
-          </div>
+            </div>
         </>
       );
     };

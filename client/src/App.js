@@ -18,6 +18,10 @@ import About from './Pages/About';
 import SignUp from './Pages/Signup';
 import RegisterForm from "./components/RegisterFom";
 import EditHotel from "./hotels/Edithotel";
+import Viewhotel from "./hotels/Viewhotel";
+
+
+
 function App() {
   return (
     
@@ -34,6 +38,7 @@ function App() {
     <Route path="/hotels/new"  element={ <PrivateRoute> <NewHotel /> </PrivateRoute> } />
     <Route path="/stripe/callback"  element={ <PrivateRoute> <StripeCallback /> </PrivateRoute> } />
     <Route path="/hotel/edit/:hotelId"  element={ <PrivateRoute> <EditHotel /> </PrivateRoute> } />
+    <Route exact path ="/hotel/:hotelId" element = {<Viewhotel />} />
     <Route path='/about' element={<About/>} />
     <Route path='/sign-up' element={<RegisterForm/>} />
     </Routes> 

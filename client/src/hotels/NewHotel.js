@@ -5,6 +5,7 @@ import { DatePicker, Select } from "antd";
 import { createHotel } from "../actions/hotel";
 import {useSelector} from "react-redux";
 import HotelCreateForm from "../components/forms/HotelCreateForm";
+import {Helmet} from 'react-helmet';
 
 
 const { Option } = Select;
@@ -75,12 +76,18 @@ const handleChange = (e) => {
 
 return (
   <>
-    <div className="container-fluid bg-secondary p-5 text-center">
-      <h2>Add Hotel</h2>
-    </div>
-    <div className="container-fluid">
+     <div className="container-fluid  p-1 text-center">
+      <h3 style={{backgroundColor: "white"
+    
+                   }}>Hotels</h3>
+      <Helmet>
+                <style>{'body { background-color: lightblue; }'}</style>
+            </Helmet>   </div>
+    <div className="container-fluid ">
+    <div style={{  justifyContent:'center', alignItems:'center', height: '3vh'}}>
+              </div>
       <div className="row">
-        <div className="col-md-10">
+        <div className="col-md-7">
           <br />
          <HotelCreateForm
          

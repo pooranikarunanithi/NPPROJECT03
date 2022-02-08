@@ -61,11 +61,11 @@ const HotelCreateForm = ({
     const { title, content, price, location } = values;
  
 return (
- 
+ //add hotel form add new 
     <form onSubmit={handleSubmit }>
     <div className="form-group">
-    <label className="=btn btn-outline-secondary btn- block  m-2 text-left">
-     image 
+    <label className="btn btn-outline-secondary btn-block  m-2 text-left">
+       image 
       
       <input 
       type="file"  

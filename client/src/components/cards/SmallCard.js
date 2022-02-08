@@ -34,7 +34,7 @@ const SmallCard = ({
   </div>
   <div className="col-md-8">
             <div className="card-body">
-              <h3 className="card-title">
+              <h2 className="card-title">
                 {h.title}{" "}
                 <span className="float-right text-primary">
                   {currencyFormatter({
@@ -42,7 +42,7 @@ const SmallCard = ({
                     currency: "usd",
                   })}
                 </span>{" "}
-                </h3>
+                </h2>
                 <p className="alert alert-info">{h.location}</p>
                 <p className="card-text">{`${h.content.substring(1, 200)}...`}</p>
                 <p className="card-text">

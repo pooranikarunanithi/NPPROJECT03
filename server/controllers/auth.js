@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
  export const register =async (req,res) =>{
      
      try {
-      console.log(req.body);
+      //console.log(req.body);
      
       const { name, email, password } = req.body;
       if (!name) return res.status(400).send("Name is required");
@@ -31,7 +31,7 @@ import jwt from "jsonwebtoken";
       // check if user with that email exist
       let user = await User.findOne({ email }).exec();
       // console.log("USER EXIST", user);
-      if (!user) res.status(400).send("User with that email not found");
+      if (!user) return res.status(400).send("User with that email not found");
       // compare password
       user.comparePassword(password, (err, match) => {
         console.log("COMPARE PASSWORD IN LOGIN ERR", err);

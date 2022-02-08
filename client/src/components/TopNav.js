@@ -1,11 +1,11 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 //import { useHistory } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 const TopNav = () => {
   const dispatch = useDispatch();
-  const { auth } = useSelector((state) => ({ ...state }));
+  const { user} = useSelector((state) => ({ ...state }));
   const navigate = useNavigate();
 
   const logout = () => {
@@ -18,27 +18,24 @@ const TopNav = () => {
   };
 
   return (
-    <div className="nav bg-light d-flex justify-content-between">
+    <nav>
+    <div className="nav bg-dark d-flex ">
+    <h2 style={{Color: "lightgreen"}}>NP Booking</h2>
       <Link className="nav-link" to="/">
         Home
       </Link>
 
-      {auth !== null && (
-        
+      {user !== null && (
           <Link className="nav-link" to="/dashboard">
             Dashboard
           </Link>
-          
-       
       )}
-
-      {auth !== null && (
+      {user!== null && (
         <a className="nav-link pointer" onClick={logout}>
           Logout
         </a>
       )}
-
-      {auth === null && (
+      {user === null && (
         <>
           <Link className="nav-link" to="/login">
             Login
@@ -49,6 +46,7 @@ const TopNav = () => {
         </>
       )}
     </div>
+    </nav>
   );
 };
 

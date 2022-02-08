@@ -5,16 +5,16 @@
     password,
     setPassword,
   }) => (
-    <form onSubmit={handleSubmit} className="mt-3">
+    <form onSubmit={handleSubmit} >
       <div className="form-group mb-3">
-        <label className="form-label">Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          placeholder="Enter email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <label className="form-label">Enter Your Email</label>
+        <input type="email"className="form-control"  placeholder="Enter email"
+
+value={email}
+onChange={(e) => setEmail(e.target.value)}
+/>
+         
+         
       </div>
   
       <div className="form-group mb-3">

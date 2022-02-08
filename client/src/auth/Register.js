@@ -1,8 +1,11 @@
 import { useState } from "react";
 import RegisterForm from '../components/RegisterFom';
+import axios from "axios";
 import { toast } from "react-toastify";
 import { register }from "../actions/auth"
 import { useNavigate } from 'react-router-dom';
+import BodyBackgroundColor from "react-body-backgroundcolor";
+
 
 import { Redirect } from 'react-router';
 //import { NavLink } from 'react-router-dom';
@@ -45,9 +48,9 @@ catch(err){
   
     return(
         <>
-        <div className= "container-fluid bg-secondary p-5 text-center">
-            <h1>Register</h1>
-        </div>
+        <BodyBackgroundColor backgroundColor='lightyellow'></BodyBackgroundColor>
+        <div className="container-fluid  p-1 text-center">
+        <h1 style={{backgroundColor: "lightgreen"}}>Register</h1> </div>
         
         <div className="container">
         <div className="row">
