@@ -18,7 +18,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
-const port =process.env.PORT || 8000;
+//const port =process.env.PORT || 8000;
 
 
 
