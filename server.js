@@ -20,10 +20,6 @@ app.use(express.json());
 readdirSync("./server/routes").map((r) => app.use("/api", require(`./server/routes/${r}`)));
 const port =process.env.PORT;
 
-
-
-app.listen(port,() => console.log('server is running on port ${port}'));
-
 if ( process.env.NODE_ENV===production) {
     app.use(express.static(path.resolve(__dirname, './client/build')));
       app.get('*', function(request, response) {
@@ -34,3 +30,6 @@ if ( process.env.NODE_ENV===production) {
         res.send("api running");
       })
     }
+
+app.listen(port,() => console.log('server is running on port ${port}'));
+
