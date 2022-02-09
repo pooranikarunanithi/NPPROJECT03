@@ -4,7 +4,7 @@ import cors from "cors";
 import mongoose from "mongoose"
 import { threadId } from "worker_threads";
 const morgan =require("morgan");
-
+const path=require("path");
 require ("dotenv").config();
 
 const app =express()
