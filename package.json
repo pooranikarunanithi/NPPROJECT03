@@ -8,11 +8,11 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "nodemon -r esm server.js",
-    "build-client": "cd ../client && npm install && npm run build",
+    "start": "nodemon -r esm server/server.js",
+    "build-client": "cd client && npm install && npm run build",
     "build": "npm run build-client && npm install",
     
-    "dev": "concurrently \"npm start\" \"cd ../client && npm start\""
+    "dev": "concurrently \"npm start\" \"cd client && npm start\""
   },
   "keywords": [],
   "author": "",
