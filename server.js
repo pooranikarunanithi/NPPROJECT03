@@ -17,7 +17,7 @@ mongoose.connect(process.env.DATABASE )
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
-readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
+readdirSync("./server/routes").map((r) => app.use("/api", require(`./server/routes/${r}`)));
 const port =process.env.PORT;
 
 
