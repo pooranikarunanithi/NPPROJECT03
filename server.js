@@ -20,7 +20,7 @@ app.use(express.json());
 readdirSync("./server/routes").map((r) => app.use("/api", require(`./server/routes/${r}`)));
 const port =process.env.PORT;
 
-if ( process.env.NODE_ENV===production) {
+if ( process.env.NODE_ENV==="production") {
     app.use(express.static(path.resolve(__dirname, './client/build')));
       app.get('*', function(request, response) {
         response.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
