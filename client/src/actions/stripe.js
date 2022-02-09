@@ -2,20 +2,19 @@ import axios from "axios";
 
 
 export const createConnectAccount = async (token) =>
-{  
-await axios.post( "api/create-connect-account"),
-   
+  await axios.post(
+    `/create-connect-account`,
     {},
     {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     }
-}
+  );
 
   export const getAccountStatus = async (token) =>
   axios.post(
-    "api/get-account-status",
+    `/get-account-status`,
     {},
     {
       headers: {
@@ -27,7 +26,7 @@ await axios.post( "api/create-connect-account"),
 
   export const getAccountBalance = async (token) =>
   axios.post(
-    "api/get-account-balance",
+    `/get-account-balance`,
     {},
     {
       headers: {
@@ -43,21 +42,19 @@ await axios.post( "api/create-connect-account"),
     });
   };
 
-  export const payoutSetting = async (token) =>{
-  
-    await axios.post ("api/payout-setting"),
-   
+  export const payoutSetting = async (token) =>
+  await axios.post(
+    `/payout-setting`,
     {},
     {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     }
-  
-  
+  );
   export const getSessionId = async (token, hotelId) =>
   await axios.post(
-    "api/stripe-session-id",
+    `/stripe-session-id`,
     {
       hotelId,
     },
@@ -66,4 +63,4 @@ await axios.post( "api/create-connect-account"),
         Authorization: `Bearer ${token}`,
       },
     }
-  )}
+  );

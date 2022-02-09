@@ -1,3 +1,4 @@
+ import './Login.css';
  const LoginForm = ({
     handleSubmit,
     email,
@@ -6,7 +7,7 @@
     setPassword,
   }) => (
     <form onSubmit={handleSubmit} >
-      <div className="form-group mb-3">
+      <div className=" form-group mb-3">
         <label className="form-label">Enter Your Email</label>
         <input type="email"className="form-control"  placeholder="Enter email"
 
@@ -17,7 +18,8 @@ onChange={(e) => setEmail(e.target.value)}
          
       </div>
   
-      <div className="form-group mb-3">
+      <div className=" form-group mb-3">
+
         <label className="form-label">Password</label>
         <input
           type="password"
