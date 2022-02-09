@@ -30,7 +30,7 @@ const DashboardSeller = () => {
     try {
       let res = await createConnectAccount(user.token);
       console.log(res); // get login link
-      window.location.href = res.data;
+      //window.location.href = res.data;
     } 
     catch (err) {
       console.log(err);

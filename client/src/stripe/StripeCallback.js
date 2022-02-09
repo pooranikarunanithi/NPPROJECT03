@@ -19,7 +19,7 @@ const StripeCallback = () => {
       const res = await getAccountStatus(user.token);
       console.log("USER ACCOUNT STATUS ON STRIPE CALLBACK", res);
       // update user in local storage
-      window.localStorage.setItem("auth", JSON.stringify(res.data));
+      window.localStorage.setItem("user", JSON.stringify(res.data));
         // update user in redux
         dispatch({
           type: "LOGGED_IN_USER",
