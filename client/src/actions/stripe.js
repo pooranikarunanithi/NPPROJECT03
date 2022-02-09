@@ -2,19 +2,20 @@ import axios from "axios";
 
 
 export const createConnectAccount = async (token) =>
-  await axios.post(
-    `${process.env.REACT_APP_API}/create-connect-account`,
+{  
+await axios.post( "api/create-connect-account"),
+   
     {},
     {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     }
-  );
+}
 
   export const getAccountStatus = async (token) =>
   axios.post(
-    `${process.env.REACT_APP_API}/get-account-status`,
+    "api/get-account-status",
     {},
     {
       headers: {
@@ -26,7 +27,7 @@ export const createConnectAccount = async (token) =>
 
   export const getAccountBalance = async (token) =>
   axios.post(
-    `${process.env.REACT_APP_API}/get-account-balance`,
+    "api/get-account-balance",
     {},
     {
       headers: {
@@ -42,19 +43,21 @@ export const createConnectAccount = async (token) =>
     });
   };
 
-  export const payoutSetting = async (token) =>
-  await axios.post(
-    `${process.env.REACT_APP_API}/payout-setting`,
+  export const payoutSetting = async (token) =>{
+  
+    await axios.post ("api/payout-setting"),
+   
     {},
     {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     }
-  );
+  
+  
   export const getSessionId = async (token, hotelId) =>
   await axios.post(
-    `${process.env.REACT_APP_API}/stripe-session-id`,
+    "api/stripe-session-id",
     {
       hotelId,
     },
@@ -63,4 +66,4 @@ export const createConnectAccount = async (token) =>
         Authorization: `Bearer ${token}`,
       },
     }
-  );
+  )}

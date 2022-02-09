@@ -1,7 +1,7 @@
 let userState;
-if(window.localStorage.getItem("auth"))
+if(window.localStorage.getItem("user"))
 {
-  userState =JSON.parse(window.localStorage.getItem("auth"));
+  userState =JSON.parse(window.localStorage.getItem("user"));
 }  else{
   userState =null; 
 }
