@@ -11,8 +11,8 @@ export const register = async (user) =>
 export const updateUserInLocalStorage = (user, next) => {
   if (window.localStorage.getItem("user")) {
     let auth = JSON.parse(localStorage.getItem("user"));
-    auth.user = user;
-    localStorage.setItem("user", JSON.stringify(auth));
+    user.user = user;
+    localStorage.setItem("user", JSON.stringify(user));
     next();
   }
 };

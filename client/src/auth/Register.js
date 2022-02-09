@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { register }from "../actions/auth"
 import { useNavigate } from 'react-router-dom';
-import BodyBackgroundColor from "react-body-backgroundcolor";
+
 
 
 import { Redirect } from 'react-router';
@@ -36,9 +36,9 @@ const handleSubmit = async (e) => {
 }
 
 catch(err){
-    console.log(err);
     
-     if (err.response.status === 400) toast.error(err.response.data);
+  console.log(err);
+    if (err.response.status ) toast.error(err.response.data);
 } 
   };
 
