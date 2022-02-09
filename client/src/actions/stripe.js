@@ -14,7 +14,7 @@ export const createConnectAccount = async (token) =>
 
   export const getAccountStatus = async (token) =>
   axios.post(
-    `/get-account-status`,
+    `api/get-account-status`,
     {},
     {
       headers: {
@@ -26,7 +26,7 @@ export const createConnectAccount = async (token) =>
 
   export const getAccountBalance = async (token) =>
   axios.post(
-    `/get-account-balance`,
+    `api/get-account-balance`,
     {},
     {
       headers: {
@@ -44,7 +44,7 @@ export const createConnectAccount = async (token) =>
 
   export const payoutSetting = async (token) =>
   await axios.post(
-    `/payout-setting`,
+    `api/payout-setting`,
     {},
     {
       headers: {
@@ -54,7 +54,7 @@ export const createConnectAccount = async (token) =>
   );
   export const getSessionId = async (token, hotelId) =>
   await axios.post(
-    `/stripe-session-id`,
+    `api/stripe-session-id`,
     {
       hotelId,
     },

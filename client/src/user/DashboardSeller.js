@@ -31,7 +31,8 @@ const DashboardSeller = () => {
       let res = await createConnectAccount(user.token);
       console.log(res); // get login link
       window.location.href = res.data;
-    } catch (err) {
+    } 
+    catch (err) {
       console.log(err);
       toast.error("Stripe connect failed, Try again.");
       setLoading(false);
