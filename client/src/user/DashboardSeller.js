@@ -34,7 +34,7 @@ const DashboardSeller = () => {
     } catch (err) {
       console.log(err);
       toast.error("Stripe connect failed, Try again.");
-      setLoading(false);
+      setLoading(true);
     }
   };
   const handleHotelDelete = async (hotelId) => {
