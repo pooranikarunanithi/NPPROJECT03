@@ -5,7 +5,7 @@ export const register = async (user) =>
  await axios.post("api/register", user);
 
   export const login = async (user) =>
- await axios.post(`${process.env.REACT_APP_API}/login`, user);
+ await axios.post("api/login", user);
 
  // update user in local storage
 export const updateUserInLocalStorage = (user, next) => {
