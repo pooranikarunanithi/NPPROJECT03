@@ -38,7 +38,7 @@ const handleSubmit = async (e) => {
 catch(err){
     
   console.log(err);
-    if (err.response.status ) toast.error(err.response.data);
+    if (err.response.status) toast.error(err.response.data);
 } 
   };
 
