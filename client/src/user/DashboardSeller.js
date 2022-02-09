@@ -77,8 +77,8 @@ const DashboardSeller = () => {
             <HomeOutlined className="h1" />
             <h4>Setup payouts to post hotel rooms</h4>
             <p className="lead">
-              MERN partners with stripe to transfer earnings to your bank
-              account
+               partners with stripe to transfer earnings to your bank
+                                account  
             </p>
             <button disabled={loading}
              onClick={handleClick}
