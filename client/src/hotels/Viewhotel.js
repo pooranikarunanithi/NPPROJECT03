@@ -47,7 +47,7 @@ const Viewhotel =() =>{
       
  return(
  <>
- <div className="container-fluid bg-secondary p-5 text-center">
+ <div className="container-fluid bg-secondary p-3 text-center">
         <h2>{hotel.title}</h2>
       </div>
       <div className="container-fluid">
@@ -61,7 +61,7 @@ const Viewhotel =() =>{
           <div className="col-md-6">
             <br />
             <b>{hotel.content}</b>
-            <p className="alert alert-info mt-3">${hotel.price}</p>
+            <p className="alert alert-info mt-3">€{hotel.price}</p>
             <p className="card-text">
                 <span className="float-right text-primary">
                   for {diffDays(hotel.from, hotel.to)}{" "}

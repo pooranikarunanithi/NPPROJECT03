@@ -9,7 +9,7 @@ require ("dotenv").config();
 
 const app =express()
 //db connection
-mongoose.connect(process.env.DATABASE)
+mongoose.connect(process.env.DATABASE )
 .then(() =>console.log('DB connected'))
 .catch((err)=>console.log('DB Cnnection error: ',err))
 //middleware

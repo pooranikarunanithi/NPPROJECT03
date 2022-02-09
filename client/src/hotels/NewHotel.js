@@ -76,13 +76,9 @@ const handleChange = (e) => {
 
 return (
   <>
-     <div className="container-fluid  p-1 text-center">
-      <h3 style={{backgroundColor: "white"
-    
-                   }}>Hotels</h3>
-      <Helmet>
-                <style>{'body { background-color: lightblue; }'}</style>
-            </Helmet>   </div>
+     <div className="container-fluid bg-secondary p-3 text-center">
+        <h2>Add Hotels</h2>
+      </div>
     <div className="container-fluid ">
     <div style={{  justifyContent:'center', alignItems:'center', height: '3vh'}}>
               </div>
@@ -106,7 +102,7 @@ return (
             alt="preview_image"
             className="img img-fluid m-2"
           />
-          <pre>{JSON.stringify(values, null, 4)}</pre>
+         {/* <pre>{JSON.stringify(values, null, 4)}</pre> */}
         
         </div>
       </div>

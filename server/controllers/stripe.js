@@ -103,7 +103,7 @@ export const stripeSessionId = async (req, res) => {
       {
         name: item.title,
         amount: item.price * 100, // in cents
-        currency: "usd",
+        currency: "eur",
         quantity: 1,
       },
     ],

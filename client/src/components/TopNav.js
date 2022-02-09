@@ -19,8 +19,8 @@ const TopNav = () => {
 
   return (
     <nav>
-    <div className="nav bg-dark d-flex ">
-    <h2 style={{Color: "lightgreen"}}>NP Booking</h2>
+    <div className="nav bg-light d-flex ">
+    <h3>NPBooking</h3>
       <Link className="nav-link" to="/">
         Home
       </Link>

@@ -45,10 +45,9 @@ import BodyBackgroundColor from "react-body-backgroundcolor";
 
     return (
         <>
-        <BodyBackgroundColor backgroundColor='purple'></BodyBackgroundColor>
-        <div className="container-fluid  p-1 text-center">
-        <h1 style={{backgroundColor: "purple"}}>Login</h1>
-       
+        
+        <div className="container-fluid bg-secondary p-3 text-center">
+        <h2>Login</h2>
       </div>
     
           <div className="container">

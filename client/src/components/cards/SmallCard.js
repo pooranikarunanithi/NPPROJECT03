@@ -39,7 +39,7 @@ const SmallCard = ({
                 <span className="float-right text-primary">
                   {currencyFormatter({
                     amount: h.price,
-                    currency: "usd",
+                    currency: "EUR",
                   })}
                 </span>{" "}
                 </h2>

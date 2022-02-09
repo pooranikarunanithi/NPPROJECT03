@@ -16,9 +16,6 @@ const [email, setEmail] =useState("");
 const [password, setPassword] =useState("");
 const navigate = useNavigate();
 
-
-
-
 const handleSubmit = async (e) => {
  e.preventDefault();
  try{
@@ -48,9 +45,9 @@ catch(err){
   
     return(
         <>
-        <BodyBackgroundColor backgroundColor='lightyellow'></BodyBackgroundColor>
-        <div className="container-fluid  p-1 text-center">
-        <h1 style={{backgroundColor: "lightgreen"}}>Register</h1> </div>
+        <div className="container-fluid bg-secondary p-3 text-center">
+        <h2>Register</h2>
+      </div>
         
         <div className="container">
         <div className="row">

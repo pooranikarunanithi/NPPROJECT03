@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { allHotels } from "../actions/hotel";
 import SmallCard from "../components/cards/SmallCard";
-import {Helmet} from 'react-helmet';
+//import {Helmet} from 'react-helmet';
 
 const Home = () => {
   const [hotels, setHotels] = useState([]);
@@ -17,13 +17,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="container-fluid  p-1 text-center">
-      <h1 style={{backgroundColor: "white"
-    
-                   }}>Hotels</h1>
-      <Helmet>
-                <style>{'body { background-color: Black; }'}</style>
-            </Helmet>   </div>
+      <div className="container-fluid bg-secondary p-3 text-center">
+        <h2>Available Hotels</h2>
+      </div>
       <div className="container-fluid">
         <br />
         {/* <pre>{JSON.stringify(hotels, null, 4)}</pre> */}
