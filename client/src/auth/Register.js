@@ -35,10 +35,9 @@ const handleSubmit = async (e) => {
 //<Redirect to='/login' />
 }
 
-catch(err){
-    
+catch(err){ 
   console.log(err);
-    if (err.response.status) toast.error(err.response.data);
+    if (err.response.status ===400){toast.error(err.response.data)} 
 } 
   };
 
