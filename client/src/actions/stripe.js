@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const createConnectAccount = async (token) =>
   await axios.post(
-    `api/create-connect-account`,
+    `../api/create-connect-account`,
     {},
     {
       headers: {
@@ -14,7 +14,7 @@ export const createConnectAccount = async (token) =>
 
   export const getAccountStatus = async (token) =>
   axios.post(
-    `api/get-account-status`,
+    `../api/get-account-status`,
     {},
     {
       headers: {
@@ -26,7 +26,7 @@ export const createConnectAccount = async (token) =>
 
   export const getAccountBalance = async (token) =>
   axios.post(
-    `api/get-account-balance`,
+    `../api/get-account-balance`,
     {},
     {
       headers: {
@@ -44,7 +44,7 @@ export const createConnectAccount = async (token) =>
 
   export const payoutSetting = async (token) =>
   await axios.post(
-    `api/payout-setting`,
+    `../api/payout-setting`,
     {},
     {
       headers: {
