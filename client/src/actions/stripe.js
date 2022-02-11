@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const createConnectAccount = async (token) =>
   await axios.post(
-    `create-connect-account`,
+    `api/create-connect-account`,
     {},
     {
       headers: {
